@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word Puzzle Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Login Screen -->
+    <div id="login-container">
+        <h2>Enter Player Names</h2>
+        <input type="text" id="player1-name" placeholder="Player 1 Name">
+        <input type="text" id="player2-name" placeholder="Player 2 Name">
+        <button onclick="startGame()">Start Game</button>
+    </div>
+
+    <!-- Game Screen -->
+    <div id="game-container" style="display: none;">
+        <h2>Word Puzzle Game</h2>
+        <h3 id="current-player"></h3>
+        <p id="scrambled-word"></p>
+        <p id="hint"></p>
+        <input type="text" id="player-input" placeholder="Enter your guess">
+        <button onclick="checkPlayerGuess()">Submit</button>
+        <p id="result"></p>
+        <p id="timer">Time Left: 60s</p>
+        <p id="score">Score: 0</p> <!-- Score moved to bottom -->
+    </div>
+
+    <!-- Winner Screen -->
+    <div id="winner-container" style="display: none;">
+        <h2 id="winner-message"></h2>
+        <button onclick="restartGame()">Restart</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
